@@ -2,9 +2,10 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package in.sarvshiksha.cms.logic;
+package in.sarvshiksha.cms.datamodel;
 
 import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -33,16 +34,17 @@ public class Concern {
         EMI_RELATED;
     }
 
-    private final int issueId;
-    private final String oderId;
-    private final String customerName;
-    private final BigDecimal customerMobileNumber;
-    private final Date issueCreationDate;
-    private final Date issueResolutionDate;
-    private final String issueType;
-    private final String reason;
-    private final String comment;
+    private int issueId;
+    private String oderId;
+    private String customerName;
+    private BigDecimal customerMobileNumber;
+    private Date issueCreationDate;
+    private Date issueResolutionDate;
+    private String issueType;
+    private String reason;
+    private String comment;
 
+    @Id
     public int getIssueId() {
         return issueId;
     }
@@ -71,12 +73,51 @@ public class Concern {
         return issueType;
     }
 
+    public void setIssueId(int issueId) {
+        this.issueId = issueId;
+    }
+
+    public void setOderId(String oderId) {
+        this.oderId = oderId;
+    }
+
+    public void setCustomerName(String customerName) {
+        this.customerName = customerName;
+    }
+
+    public void setCustomerMobileNumber(BigDecimal customerMobileNumber) {
+        this.customerMobileNumber = customerMobileNumber;
+    }
+
+    public void setIssueCreationDate(Date issueCreationDate) {
+        this.issueCreationDate = issueCreationDate;
+    }
+
+    public void setIssueResolutionDate(Date issueResolutionDate) {
+        this.issueResolutionDate = issueResolutionDate;
+    }
+
+    public void setIssueType(String issueType) {
+        this.issueType = issueType;
+    }
+
+    public void setReason(String reason) {
+        this.reason = reason;
+    }
+
+    public void setComment(String comment) {
+        this.comment = comment;
+    }
+
     public String getReason() {
         return reason;
     }
 
     public String getComment() {
         return comment;
+    }
+
+    public Concern() {
     }
 
     public Concern(int issueId, String oderId, String customerName, BigDecimal customerMobileNumber, Date issueCreationDate, Date issueResolutionDate, String issueType, String reason, String comment) {

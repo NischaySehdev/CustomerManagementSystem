@@ -7,7 +7,6 @@ package in.sarvshiksha.cms.datamodel;
 
 import in.sarvshiksha.cms.constant.Messages;
 import in.sarvshiksha.cms.logic.CmsConfiguration;
-import in.sarvshiksha.cms.logic.Concern;
 import java.util.Date;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -57,7 +56,7 @@ public class Issue extends javax.swing.JFrame {
         chooseSubConcernTitle.setFont(new java.awt.Font("Dialog", 0, 11)); // NOI18N
         chooseSubConcernTitle.setText("Choose the issue");
 
-        issueDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a reason", "Techincian_date_breached", "Technician_alingment", "Technician_behaviour_issue", "Techinician_didn't_check_the_product_appropraitely", " " }));
+        issueDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select a reason" }));
 
         commentBox.setColumns(20);
         commentBox.setRows(5);

@@ -6,6 +6,7 @@ package in.sarvshiksha.cms.logic;
  * and open the template in the editor.
  */
 import in.sarvshiksha.cms.constant.Messages;
+import in.sarvshiksha.cms.datamodel.User;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 import javax.swing.JOptionPane;
@@ -150,7 +151,7 @@ public class NewUser extends javax.swing.JFrame {
         if (this.isUsernameValid(usernameField.getText())) {
             JOptionPane.showMessageDialog(this, Messages.INVALID_USERNAME, Messages.ERROR, JOptionPane.ERROR_MESSAGE);
             usernameField.setText("");
-        } else if (this.isMobileNumber(mobileNumberField.getText())) {
+        } else if (mobileNumberField.getText().length() != 10) {
             JOptionPane.showMessageDialog(this, Messages.INVALID_MOBILE_NUMBER, Messages.ERROR, JOptionPane.ERROR_MESSAGE);
         } else if (this.isPasswordValid(passwordField.getText())) {
             JOptionPane.showMessageDialog(this, Messages.INVALID_PASSWORD, Messages.ERROR, JOptionPane.ERROR_MESSAGE);

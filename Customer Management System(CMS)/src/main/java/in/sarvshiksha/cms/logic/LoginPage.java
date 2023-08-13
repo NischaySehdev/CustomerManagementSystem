@@ -6,6 +6,7 @@
 package in.sarvshiksha.cms.logic;
 
 import in.sarvshiksha.cms.constant.Messages;
+import in.sarvshiksha.cms.datamodel.User;
 import javax.swing.JOptionPane;
 
 /**

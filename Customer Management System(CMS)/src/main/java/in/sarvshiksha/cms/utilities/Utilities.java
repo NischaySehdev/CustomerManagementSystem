@@ -5,7 +5,7 @@
 package in.sarvshiksha.cms.utilities;
 
 import in.sarvshiksha.cms.datamodel.ProductDescription;
-import in.sarvshiksha.cms.logic.Concern;
+import in.sarvshiksha.cms.datamodel.Concern;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

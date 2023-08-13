@@ -46,66 +46,6 @@
           <Group type="102" attributes="0">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="offerRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="emiRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="offerConcernDropDown" max="32767" attributes="0"/>
-                          <Component id="emiConcernDropDown" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" alignment="1" attributes="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Component id="installationRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="feRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace max="-2" attributes="0"/>
-                              <Component id="accountConcernRadioButton" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                      </Group>
-                      <EmptySpace max="32767" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="installationConcernDropDown" alignment="1" pref="129" max="32767" attributes="0"/>
-                          <Component id="feConcernDropDown" alignment="1" max="32767" attributes="0"/>
-                          <Component id="accountConcernDropDown" alignment="0" max="32767" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Group type="102" attributes="0">
-                      <Component id="returnRadioButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
-                      <Component id="returnConcernDropDown" max="32767" attributes="0"/>
-                  </Group>
-              </Group>
-              <EmptySpace type="separate" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="103" groupAlignment="1" attributes="0">
-                      <Component id="technicianRadioButton" min="-2" max="-2" attributes="0"/>
-                      <Group type="102" alignment="1" attributes="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="cceRadioButton" min="-2" max="-2" attributes="0"/>
-                              <Component id="deliveryRadioButton" min="-2" max="-2" attributes="0"/>
-                              <Component id="otherRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
-                          </Group>
-                          <EmptySpace min="-2" pref="2" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <Component id="paymentRadioButton" alignment="1" min="-2" max="-2" attributes="0"/>
-              </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Component id="otherConcernDropDown" alignment="1" max="32767" attributes="0"/>
-                  <Component id="cceConcernDropDown" alignment="1" max="32767" attributes="0"/>
-                  <Component id="technicianConcerDropDown" min="-2" pref="125" max="-2" attributes="0"/>
-                  <Component id="paymentConcernDropDown" alignment="0" max="32767" attributes="0"/>
-                  <Component id="deliveryConcernDropDown" alignment="0" max="32767" attributes="0"/>
-              </Group>
-              <EmptySpace max="-2" attributes="0"/>
-          </Group>
-          <Group type="102" attributes="0">
-              <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" attributes="0">
                       <EmptySpace max="-2" attributes="0"/>
                       <Component id="jLabel4" min="-2" pref="59" max="-2" attributes="0"/>
                   </Group>
@@ -115,17 +55,74 @@
                       <Component id="closeCaseButton" min="-2" pref="95" max="-2" attributes="0"/>
                   </Group>
               </Group>
-              <EmptySpace min="0" pref="370" max="32767" attributes="0"/>
-          </Group>
-          <Group type="102" alignment="1" attributes="0">
-              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace min="-2" pref="167" max="-2" attributes="0"/>
+              <EmptySpace min="0" pref="446" max="32767" attributes="0"/>
           </Group>
           <Group type="102" attributes="0">
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="offerRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="emiRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="offerConcernDropDown" max="32767" attributes="0"/>
+                                  <Component id="emiConcernDropDown" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="1" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="installationRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="feRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                                  <Component id="accountConcernRadioButton" min="-2" max="-2" attributes="0"/>
+                              </Group>
+                              <EmptySpace max="32767" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="installationConcernDropDown" alignment="1" pref="129" max="32767" attributes="0"/>
+                                  <Component id="feConcernDropDown" alignment="1" max="32767" attributes="0"/>
+                                  <Component id="accountConcernDropDown" alignment="0" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Component id="returnRadioButton" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                              <Component id="returnConcernDropDown" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="cceRadioButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="deliveryRadioButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="otherRadioButton1" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Component id="paymentRadioButton" min="-2" max="-2" attributes="0"/>
+                          <Component id="technicianRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="14" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="otherConcernDropDown" alignment="1" max="32767" attributes="0"/>
+                          <Component id="cceConcernDropDown" alignment="1" max="32767" attributes="0"/>
+                          <Component id="technicianConcerDropDown" min="-2" pref="125" max="-2" attributes="0"/>
+                          <Component id="paymentConcernDropDown" alignment="0" max="32767" attributes="0"/>
+                          <Component id="deliveryConcernDropDown" alignment="0" max="32767" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" attributes="0">
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="224" max="-2" attributes="0"/>
+                              <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
               <EmptySpace max="-2" attributes="0"/>
-              <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -151,12 +148,12 @@
                       <Component id="returnRadioButton" min="-2" max="-2" attributes="0"/>
                       <EmptySpace min="-2" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="paymentRadioButton" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
-                              <Component id="paymentConcernDropDown" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <Component id="paymentConcernDropDown" min="-2" max="-2" attributes="0"/>
                           <Component id="offerRadioButton" alignment="0" min="-2" max="-2" attributes="0"/>
-                          <Component id="offerConcernDropDown" alignment="0" min="-2" max="-2" attributes="0"/>
+                          <Group type="103" alignment="0" groupAlignment="3" attributes="0">
+                              <Component id="offerConcernDropDown" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="paymentRadioButton" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                          </Group>
                       </Group>
                   </Group>
               </Group>
@@ -185,10 +182,10 @@
                   <Component id="otherConcernDropDown" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="otherRadioButton1" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
-              <EmptySpace type="unrelated" max="-2" attributes="0"/>
-              <Group type="103" groupAlignment="3" attributes="0">
-                  <Component id="accountConcernRadioButton" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="accountConcernDropDown" alignment="3" min="-2" max="-2" attributes="0"/>
+              <EmptySpace max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Component id="accountConcernRadioButton" min="-2" max="-2" attributes="0"/>
+                  <Component id="accountConcernDropDown" alignment="0" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace min="-2" pref="19" max="-2" attributes="0"/>
               <Component id="jSeparator2" min="-2" pref="10" max="-2" attributes="0"/>
@@ -388,7 +385,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="returnRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Return concerns"/>
+        <Property name="text" type="java.lang.String" value="RETURN_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="returnRadioButtonActionPerformed"/>
@@ -396,7 +393,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="offerRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Offer concerns"/>
+        <Property name="text" type="java.lang.String" value="OFFER_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="offerRadioButtonActionPerformed"/>
@@ -404,7 +401,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="emiRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="E.M.I concerns"/>
+        <Property name="text" type="java.lang.String" value="EMI_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="emiRadioButtonActionPerformed"/>
@@ -412,7 +409,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="installationRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Installation concerns"/>
+        <Property name="text" type="java.lang.String" value="INSTALLATION_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="installationRadioButtonActionPerformed"/>
@@ -420,7 +417,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="feRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="F.E concerns"/>
+        <Property name="text" type="java.lang.String" value="WISHMASTER_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="feRadioButtonActionPerformed"/>
@@ -428,7 +425,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="technicianRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Techician concerns"/>
+        <Property name="text" type="java.lang.String" value="TECHNICIAN_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="technicianRadioButtonActionPerformed"/>
@@ -436,7 +433,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="paymentRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Payment concerns"/>
+        <Property name="text" type="java.lang.String" value="PAYMENT_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="paymentRadioButtonActionPerformed"/>
@@ -444,7 +441,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="deliveryRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Delivery concerns"/>
+        <Property name="text" type="java.lang.String" value="DELIVERY_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deliveryRadioButtonActionPerformed"/>
@@ -452,7 +449,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="cceRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="CCE concerns"/>
+        <Property name="text" type="java.lang.String" value="CUSTOMER_CARE_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="cceRadioButtonActionPerformed"/>
@@ -460,7 +457,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="accountConcernRadioButton">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Other concerns"/>
+        <Property name="text" type="java.lang.String" value="ACCOUNT_RELATED"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="accountConcernRadioButtonActionPerformed"/>
@@ -480,7 +477,7 @@
     </Component>
     <Component class="javax.swing.JRadioButton" name="otherRadioButton1">
       <Properties>
-        <Property name="text" type="java.lang.String" value="Other concerns"/>
+        <Property name="text" type="java.lang.String" value="OTHER_CONCERN"/>
       </Properties>
       <Events>
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="otherRadioButton1ActionPerformed"/>

@@ -4,9 +4,10 @@
  */
 package in.sarvshiksha.cms.datamodel;
 
-import in.sarvshiksha.cms.datamodel.Policy;
+import jakarta.persistence.Embedded;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 import java.math.BigDecimal;
 import java.util.Date;
 
@@ -15,6 +16,7 @@ import java.util.Date;
  * @author nisch
  */
 @Entity
+@Table(name = "PRODUCT_DESCRIPTION")
 public class ProductDescription {
 
     @Id
@@ -22,6 +24,7 @@ public class ProductDescription {
     private String customerName;
     private String productName;
     private Date dateOfPurchase;
+    @Embedded
     private Policy policy;
     private BigDecimal mobileNumber;
 

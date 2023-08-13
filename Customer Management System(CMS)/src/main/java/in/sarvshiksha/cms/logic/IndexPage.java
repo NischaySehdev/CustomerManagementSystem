@@ -76,7 +76,6 @@ public class IndexPage extends javax.swing.JFrame {
         });
 
         existingUserrRadioButton.setText("Existing user");
-        existingUserrRadioButton.setEnabled(false);
         existingUserrRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 existingUserrRadioButtonActionPerformed(evt);
@@ -84,7 +83,6 @@ public class IndexPage extends javax.swing.JFrame {
         });
 
         newUserRadioButton.setText("New user");
-        newUserRadioButton.setEnabled(false);
         newUserRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 newUserRadioButtonActionPerformed(evt);
@@ -132,11 +130,12 @@ public class IndexPage extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void skipTourButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_skipTourButtonActionPerformed
-        dispose();
         if (existingUserrRadioButton.isSelected()) {
-            cmsConfiguration.getLogin().setEnabled(true);
+            dispose();
+            cmsConfiguration.getLogin().setVisible(true);
         } else if (newUserRadioButton.isSelected()) {
-            cmsConfiguration.getNewUser().setEnabled(true);
+            dispose();
+            cmsConfiguration.getNewUser().setVisible(true);
         } else {
             JOptionPane.showMessageDialog(this, Messages.NOTHING_SELECTED, Messages.ERROR, JOptionPane.ERROR_MESSAGE);
         }

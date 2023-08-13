@@ -9,7 +9,6 @@ import in.sarvshiksha.cms.constant.Messages;
 import static in.sarvshiksha.cms.constant.Messages.NOTHING_ENTERED;
 import in.sarvshiksha.cms.datamodel.ProductDescription;
 import in.sarvshiksha.cms.utilities.Utilities;
-import java.util.Optional;
 import javax.swing.JOptionPane;
 
 /**
@@ -89,14 +88,15 @@ public class Agent extends javax.swing.JFrame {
 
         policyduraiton.setText("Policy Duration");
 
-        nonCriticalIssuesDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose an issue", "Delivery_Related_Issue", "Return_Related_Issue", "Offer_Related_Issue", "Payment_Related_Issue", "Account_Related_Issue", "E.M.I_Related_Issue", " " }));
+        nonCriticalIssuesDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Choose an issue", "DELIVERY_RELATED", "RETURN_RELATED", "PAYMENT_RELATED", "ACCOUNT_RELATED", "EMI_RELATED" }));
         nonCriticalIssuesDropDown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 nonCriticalIssuesDropDownActionPerformed(evt);
             }
         });
 
-        criticalissueDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select_reason", "Technician_related_issue", "Installation_related_issue", "Wishmaster_related_issue", "Customer_Care_Executive_related_issue", "Other_reason", " " }));
+        criticalissueDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select_reason", "WISHMASTER_RELATED,", "TECHNICIAN_RELATED,", "CUSTOMER_CARE_RELATED,", "INSTALLATION_RELATED,", "OFFER_RELATED,", "OTHER_CONCERN;", " " }));
+        criticalissueDropDown.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         criticalissueDropDown.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 criticalissueDropDownActionPerformed(evt);
@@ -175,7 +175,7 @@ public class Agent extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(nonCriticalIssuesDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(type1acion, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 23, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 35, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(type2action, javax.swing.GroupLayout.PREFERRED_SIZE, 83, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(criticalissueDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -245,8 +245,7 @@ public class Agent extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void searchbuttonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_searchbuttonActionPerformed
-        Optional<Integer> orderIdField = Optional.ofNullable(Integer.valueOf(orderidfield.getText()));
-        if (orderIdField.isEmpty()) {
+        if (orderidfield.getText().isEmpty()) {
             JOptionPane.showMessageDialog(this, NOTHING_ENTERED, Messages.ERROR, JOptionPane.ERROR_MESSAGE);
         } else {
             productDescription = (ProductDescription) configuration.getObjectFromSession(ProductDescription.class, orderidfield.getText());

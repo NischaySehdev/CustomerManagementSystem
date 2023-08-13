@@ -102,13 +102,8 @@
     <Component class="javax.swing.JComboBox" name="issueDropDown">
       <Properties>
         <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-          <StringArray count="6">
+          <StringArray count="1">
             <StringItem index="0" value="Select a reason"/>
-            <StringItem index="1" value="Techincian_date_breached"/>
-            <StringItem index="2" value="Technician_alingment"/>
-            <StringItem index="3" value="Technician_behaviour_issue"/>
-            <StringItem index="4" value="Techinician_didn&apos;t_check_the_product_appropraitely"/>
-            <StringItem index="5" value=" "/>
           </StringArray>
         </Property>
       </Properties>

@@ -1,10 +1,13 @@
 package in.sarvshiksha.cms.logic;
 
+import in.sarvshiksha.cms.datamodel.Concern;
 import in.sarvshiksha.cms.datamodel.Issue;
 import in.sarvshiksha.cms.utilities.Utilities;
+import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
+import org.hibernate.query.Query;
 
 /**
  *
@@ -15,12 +18,13 @@ public class CmsConfiguration {
     private final IndexPage indexPage;
     private final NewUser newUser;
     private final LoginPage login;
-    private final Session session;
+    private Session session;
     private final Issue issue;
     private final Agent agent;
     private final Supervisor supervisor;
     private final Utilities utilities;
     private final CmsInfoPage cmsInfoPage;
+    private final SessionFactory sessionFactory;
 
     public CmsConfiguration() {
         indexPage = new IndexPage(this);
@@ -32,9 +36,10 @@ public class CmsConfiguration {
         supervisor = new Supervisor(this);
         utilities = new Utilities();
 
-        SessionFactory sessionFactory = new Configuration().buildSessionFactory();
-        session = sessionFactory.openSession();
-        session.beginTransaction();
+        sessionFactory = new Configuration()
+                .configure("hibernate.cfg.xml")
+                .buildSessionFactory();
+
     }
 
     public static void main(String[] args) {
@@ -48,11 +53,24 @@ public class CmsConfiguration {
     }
 
     public Object getObjectFromSession(Class classType, String id) {
+        session = sessionFactory.openSession();
+        session.beginTransaction();
         return session.get(classType, id);
     }
 
+    public List<Concern> getObjectFromUsingQuery(String hqlQuery) {
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        Query query = session.createQuery(hqlQuery);
+        return query.list();
+    }
+
     public void setObject(Object object) {
-        session.save(object);
+        session = sessionFactory.openSession();
+        session.beginTransaction();
+        session.persist(object);
+        session.flush();
+        session.close();
     }
 
     public void deleteObject(Class classType, String id) {

@@ -2,16 +2,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package in.sarvshiksha.cms.logic;
+package in.sarvshiksha.cms.datamodel;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.Table;
 
 /**
  *
  * @author nisch
  */
 @Entity
+@Table(name = "USER_CREDENTIAL")
 public class User {
 
     public static enum TYPE {
@@ -37,6 +39,10 @@ public class User {
 
     public String getType() {
         return type;
+    }
+
+    public User() {
+
     }
 
     public User(String fullName, String mobileNumber, String password, String type) {

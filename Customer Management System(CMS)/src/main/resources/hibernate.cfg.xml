@@ -1,0 +1,40 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-configuration SYSTEM 
+"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+   <session-factory>
+   
+       <property name="connection.pool_size">
+           10
+       </property> 
+	   <property name="hbm2ddl.auto">
+	   update
+	   </property>
+	   
+      <property name = "dialect">
+         org.hibernate.dialect.MySQLDialect
+      </property>
+      
+      <property name = "connection.driver_class">
+         com.mysql.cj.jdbc.Driver
+      </property>
+      
+      <!-- Assume test is the database name -->
+      
+      <property name = "connection.url">
+         jdbc:mysql://localhost:3306/customer_management_system
+      </property>
+      
+      <property name = "connection.username">
+	  root
+      </property>
+		
+      <property name = "connection.password">
+         J@mesbondoo7
+      </property>
+	  <property name="show_sql">true</property>
+	  <mapping class="in.sarvshiksha.cms.datamodel.User"/>
+	  <mapping class="in.sarvshiksha.cms.datamodel.ProductDescription"/>
+	  <mapping class="in.sarvshiksha.cms.datamodel.Concern"/>
+   </session-factory>
+</hibernate-configuration>

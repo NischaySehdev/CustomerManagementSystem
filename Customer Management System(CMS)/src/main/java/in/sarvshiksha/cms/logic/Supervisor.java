@@ -6,6 +6,7 @@
 package in.sarvshiksha.cms.logic;
 
 import in.sarvshiksha.cms.constant.Messages;
+import in.sarvshiksha.cms.datamodel.Concern;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -24,6 +25,7 @@ public class Supervisor extends javax.swing.JFrame {
      */
     private final CmsConfiguration cmsConfiguration;
     private final Map<String, Map<JRadioButton, JComboBox<String>>> issueRadioDropDownMap;
+    private String selectConcern = null;
 
     public Supervisor(CmsConfiguration cmsConfiguration) {
         this.cmsConfiguration = cmsConfiguration;
@@ -172,70 +174,70 @@ public class Supervisor extends javax.swing.JFrame {
             }
         });
 
-        returnRadioButton.setText("Return concerns");
+        returnRadioButton.setText("RETURN_RELATED");
         returnRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 returnRadioButtonActionPerformed(evt);
             }
         });
 
-        offerRadioButton.setText("Offer concerns");
+        offerRadioButton.setText("OFFER_RELATED");
         offerRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 offerRadioButtonActionPerformed(evt);
             }
         });
 
-        emiRadioButton.setText("E.M.I concerns");
+        emiRadioButton.setText("EMI_RELATED");
         emiRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 emiRadioButtonActionPerformed(evt);
             }
         });
 
-        installationRadioButton.setText("Installation concerns");
+        installationRadioButton.setText("INSTALLATION_RELATED");
         installationRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 installationRadioButtonActionPerformed(evt);
             }
         });
 
-        feRadioButton.setText("F.E concerns");
+        feRadioButton.setText("WISHMASTER_RELATED");
         feRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 feRadioButtonActionPerformed(evt);
             }
         });
 
-        technicianRadioButton.setText("Techician concerns");
+        technicianRadioButton.setText("TECHNICIAN_RELATED");
         technicianRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 technicianRadioButtonActionPerformed(evt);
             }
         });
 
-        paymentRadioButton.setText("Payment concerns");
+        paymentRadioButton.setText("PAYMENT_RELATED");
         paymentRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 paymentRadioButtonActionPerformed(evt);
             }
         });
 
-        deliveryRadioButton.setText("Delivery concerns");
+        deliveryRadioButton.setText("DELIVERY_RELATED");
         deliveryRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 deliveryRadioButtonActionPerformed(evt);
             }
         });
 
-        cceRadioButton.setText("CCE concerns");
+        cceRadioButton.setText("CUSTOMER_CARE_RELATED");
         cceRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cceRadioButtonActionPerformed(evt);
             }
         });
 
-        accountConcernRadioButton.setText("Other concerns");
+        accountConcernRadioButton.setText("ACCOUNT_RELATED");
         accountConcernRadioButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountConcernRadioButtonActionPerformed(evt);
@@ -244,7 +246,7 @@ public class Supervisor extends javax.swing.JFrame {
 
         accountConcernDropDown.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Cases" }));
 
-        otherRadioButton1.setText("Other concerns");
+        otherRadioButton1.setText("OTHER_CONCERN");
         otherRadioButton1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 otherRadioButton1ActionPerformed(evt);
@@ -261,66 +263,63 @@ public class Supervisor extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(offerRadioButton)
-                            .addComponent(emiRadioButton))
-                        .addGap(30, 30, 30)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(offerConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(emiConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(installationRadioButton)
-                            .addComponent(feRadioButton)
-                            .addGroup(layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addComponent(accountConcernRadioButton)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(installationConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, 129, Short.MAX_VALUE)
-                            .addComponent(feConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(accountConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(returnRadioButton)
-                        .addGap(21, 21, 21)
-                        .addComponent(returnConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(technicianRadioButton)
-                        .addGroup(layout.createSequentialGroup()
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(cceRadioButton)
-                                .addComponent(deliveryRadioButton)
-                                .addComponent(otherRadioButton1))
-                            .addGap(2, 2, 2)))
-                    .addComponent(paymentRadioButton, javax.swing.GroupLayout.Alignment.TRAILING))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(otherConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(cceConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(technicianConcerDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(paymentConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(deliveryConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(layout.createSequentialGroup()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(logoutButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(closeCaseButton, javax.swing.GroupLayout.PREFERRED_SIZE, 95, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(0, 370, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jLabel1)
-                .addGap(167, 167, 167))
+                .addGap(0, 446, Short.MAX_VALUE))
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(offerRadioButton)
+                                    .addComponent(emiRadioButton))
+                                .addGap(30, 30, 30)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(offerConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(emiConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(installationRadioButton)
+                                    .addComponent(feRadioButton)
+                                    .addComponent(accountConcernRadioButton))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(installationConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, 129, Short.MAX_VALUE)
+                                    .addComponent(feConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(accountConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(returnRadioButton)
+                                .addGap(21, 21, 21)
+                                .addComponent(returnConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(cceRadioButton)
+                            .addComponent(deliveryRadioButton)
+                            .addComponent(otherRadioButton1)
+                            .addComponent(paymentRadioButton)
+                            .addComponent(technicianRadioButton))
+                        .addGap(14, 14, 14)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(otherConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(cceConcernDropDown, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(technicianConcerDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, 125, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(paymentConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(deliveryConcernDropDown, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addContainerGap()
+                                .addComponent(jLabel3))
+                            .addGroup(layout.createSequentialGroup()
+                                .addGap(224, 224, 224)
+                                .addComponent(jLabel1)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -342,11 +341,11 @@ public class Supervisor extends javax.swing.JFrame {
                         .addComponent(returnRadioButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(paymentRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addComponent(paymentConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(paymentConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(offerRadioButton)
-                            .addComponent(offerConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(offerConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(paymentRadioButton, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(emiRadioButton)
@@ -367,8 +366,8 @@ public class Supervisor extends javax.swing.JFrame {
                     .addComponent(feConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(otherConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(otherRadioButton1))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(accountConcernRadioButton)
                     .addComponent(accountConcernDropDown, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(19, 19, 19)
@@ -392,30 +391,18 @@ public class Supervisor extends javax.swing.JFrame {
         } else if (returnConcernDropDown.getSelectedIndex() == 0 && offerConcernDropDown.getSelectedIndex() == 0 && installationConcernDropDown.getSelectedIndex() == 0 && emiConcernDropDown.getSelectedIndex() == 0 && technicianConcerDropDown.getSelectedIndex() == 0 && paymentConcernDropDown.getSelectedIndex() == 0 && deliveryConcernDropDown.getSelectedIndex() == 0 && cceConcernDropDown.getSelectedIndex() == 0 && feConcernDropDown.getSelectedIndex() == 0 && otherConcernDropDown.getSelectedIndex() == 0) {
             JOptionPane.showMessageDialog(this, Messages.NOTHING_SELECTED, Messages.ERROR, JOptionPane.ERROR_MESSAGE);
         } else {
-            Map.Entry<JRadioButton, JComboBox<String>> map = (Map.Entry<JRadioButton, JComboBox<String>>) issueRadioDropDownMap.get(getSelectedRadioButton()).entrySet();
+            Map.Entry<JRadioButton, JComboBox<String>> map = (Map.Entry<JRadioButton, JComboBox<String>>) issueRadioDropDownMap.get(getSelectedConcern()).entrySet();
             cmsConfiguration.deleteObject(Concern.class, map.getValue().getSelectedItem().toString());
         }
 
     }//GEN-LAST:event_closeCaseButtonActionPerformed
 
     private List<Concern> getConcerns() {
-        return (List<Concern>) cmsConfiguration.getObjectFromSession(Concern.class, getSelectedRadioButton());
+        return cmsConfiguration.getObjectFromUsingQuery("FROM in.sarvshiksha.cms.datamodel.Concern concern WHERE concern.issueType='" + getSelectedConcern() + "'");
     }
 
-    private String getSelectedRadioButton() {
-        for (Concern.CRITICAL_TYPE issueType : Concern.CRITICAL_TYPE.values()) {
-            Map.Entry<JRadioButton, JComboBox<String>> map = (Map.Entry<JRadioButton, JComboBox<String>>) issueRadioDropDownMap.get(issueType);
-            if (map.getKey().isSelected()) {
-                return issueType.name();
-            }
-        }
-        for (Concern.NON_CRITICAL_TYPE issueType : Concern.NON_CRITICAL_TYPE.values()) {
-            Map.Entry<JRadioButton, JComboBox<String>> map = (Map.Entry<JRadioButton, JComboBox<String>>) issueRadioDropDownMap.get(issueType);
-            if (map.getKey().isSelected()) {
-                return issueType.name();
-            }
-        }
-        return null;
+    private String getSelectedConcern() {
+        return selectConcern;
     }
 
     private void logoutButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_logoutButtonActionPerformed
@@ -438,24 +425,17 @@ public class Supervisor extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_returnRadioButtonActionPerformed
 
-    private void disableOtherRadionButton(JRadioButton issueRadioButton) {
-        for (Concern.CRITICAL_TYPE issueType : Concern.CRITICAL_TYPE.values()) {
-            issueRadioDropDownMap.get(issueType).keySet().forEach(issue -> {
-                if (!issueRadioButton.equals(issue)) {
-                    issue.setSelected(Boolean.FALSE);
+    private void disableOtherRadionButton(JRadioButton selectRadioButton) {
+        selectConcern = selectRadioButton.getText();
+        for (Map.Entry<String, Map<JRadioButton, JComboBox<String>>> entry : issueRadioDropDownMap.entrySet()) {
+            Map<JRadioButton, JComboBox<String>> value = entry.getValue();
+            value.forEach((jRadioButton, jDropDownMenu) -> {
+                if (!((JRadioButton) jRadioButton).equals(selectRadioButton)) {
+                    ((JRadioButton) jRadioButton).setSelected(Boolean.FALSE);
                 }
             });
         }
-        for (Concern.NON_CRITICAL_TYPE issueType : Concern.NON_CRITICAL_TYPE.values()) {
-            issueRadioDropDownMap.get(issueType).keySet().forEach(issue -> {
-                if (!issueRadioButton.equals(issue)) {
-                    issue.setSelected(Boolean.FALSE);
-                }
-            });
-        }
-
     }
-
     private void offerRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_offerRadioButtonActionPerformed
         this.disableOtherRadionButton((JRadioButton) evt.getSource());
         getConcerns().forEach(concern -> {
@@ -505,19 +485,19 @@ public class Supervisor extends javax.swing.JFrame {
         });
     }//GEN-LAST:event_cceRadioButtonActionPerformed
 
-    private void accountConcernRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountConcernRadioButtonActionPerformed
-        this.disableOtherRadionButton((JRadioButton) evt.getSource());
-        getConcerns().forEach(concern -> {
-            accountConcernDropDown.addItem(String.valueOf(concern.getIssueId()));
-        });
-    }//GEN-LAST:event_accountConcernRadioButtonActionPerformed
-
     private void otherRadioButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_otherRadioButton1ActionPerformed
         this.disableOtherRadionButton((JRadioButton) evt.getSource());
         getConcerns().forEach(concern -> {
             otherConcernDropDown.addItem(String.valueOf(concern.getIssueId()));
         });
     }//GEN-LAST:event_otherRadioButton1ActionPerformed
+
+    private void accountConcernRadioButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_accountConcernRadioButtonActionPerformed
+        this.disableOtherRadionButton((JRadioButton) evt.getSource());
+        getConcerns().forEach(concern -> {
+            accountConcernDropDown.addItem(String.valueOf(concern.getIssueId()));
+        });
+    }//GEN-LAST:event_accountConcernRadioButtonActionPerformed
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> accountConcernDropDown;
